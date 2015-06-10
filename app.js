@@ -10,15 +10,14 @@ var request   = require('request');
 var ical2json = require("ical2json");
 
 var config = require('./config.json');
+var icalURL = config.icalURL;
 
 var routes = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
 
-var icalURL = config.icalURL;
-
-var ical = require('./includes/ical_parser');
+var ical = require('./includes/ical_parser')(icalURL);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

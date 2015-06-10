@@ -1,8 +1,8 @@
 (function loop() {
-  setTimeout(function() {
+	setTimeout(function() {
 
-    console.log("Running loop...");
-    loop();
+		console.log("Running loop...");
+		loop();
 
-  }, 5000);
+	}, 5000);
 })();

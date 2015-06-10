@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var fs        = require('fs');
+var request   = require('request');
+var ical2json = require("ical2json");
+
 var config = require('./config.json');
 
 var routes = require('./routes/index');
